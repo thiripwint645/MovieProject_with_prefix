@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Thiri Pwint" />
+    <link rel="icon" href="images/clapperboard.png" />
+    <title>MovieJoy</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="node_module/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!---fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/12b0473b9f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <!-- animate css -->
+    <link rel="stylesheet" href="node_module/animate.css/animate.css" />
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive-tabs.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="css/cus.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <header>
+      <nav class="sticky">
+        <div class="container nav-wrapper">
+          <div class="brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path
+                d="M10.5 10a2.5 2.5 0 1 1-5.001-.001A2.5 2.5 0 0 1 10.5 10zM16 4v12c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2zm-3.5 6a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0zm6.715-4.914L17 6.562v7l2.215 1.477a.505.505 0 0 0 .785-.42V5.506a.505.505 0 0 0-.785-.42z"
+              />
+            </svg>
+            <span>MoviesJoy</span>
+          </div>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li class="active"><a href="movie.html">Movies</a></li>
+            <li class=""><a href="top_imdb.html">Top IMDB</a></li>
+
+            <li class="mod">
+              <button
+                type="button"
+                class="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Login
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">
+                        Enter your email and password
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="">
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          placeholder="Email"
+                        />
+                        <input
+                          type="password"
+                          class="form-control mb-3"
+                          placeholder="password"
+                        />
+                        <button type="button" class="btn w-100 btn-primary">
+                          Login
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="container">
+        <div class="" style="position: relative">
+          <div
+            id="carouselExampleInterval"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="5000">
+                <img
+                  src="./images/slide-1.jpg"
+                  class="d-block w-100"
+                  alt="img"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  src="./images/slide-2.jpg"
+                  class="d-block w-100"
+                  alt="img"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  src="./images/slide-3.jpg"
+                  class="d-block w-100"
+                  alt="img"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="wow animate__fadeInDownBig">
+        <h2 class="pg2-content-title text-center mt-n5">MOVIESJOY</h2>
+      </div>
+    </section>
+    <!-- movies Section -->
+    <section class="mt-5" id="top-related">
+      <div class="container-fluid my-3">
+        <div class="row">
+          <div class="d-flex justify-content-between">
+            <div class="cast-title">
+              <div class="wow animate__fadeInLeftBig">
+                <h3 class="">
+                  <span>Movies </span> In Theatre
+                  <span><i class="fa-solid fa-angle-right"></i></span>
+                </h3>
+                <hr />
+              </div>
+            </div>
+            <div class="wow animate__fadeInRightBig">
+              <a href="#tv-shows" class="text-white text-decoration-none"
+                >View TV shows</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-box-1g">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div id="team-members" class="owl-carousel owl-theme">
+                <div>
+                  <div class="team-member item">
+                    <img
+                      src="./images/Gabriel's Inferno Part II.jpg"
+                      alt="Gabriel's Inferno Part II"
+                      class="img-fluid"
+                    />
+                    <div class="team-member-overlay">
+                      <div class="team-member-info text-center">
+                        <h6>Play Trailer</h6>
+
+                        <div class="social-list">
+                          <a href=" "
+                            ><i
+                              class="fa-solid fa-circle-caret-right fs-1 my-5 text-white"
+                            ></i
+                          ></a>
+                        </div>
+                        <p>Gabriel's Inferno Part II</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating d-flex justify-content-between mt-2">
+                    <div class="me-lg-1">
+                      <span class="word-rate text-white">Rating</span>
+                      <img src="./images/rating.gif " alt=" " class="stars" />
+                    </div>
+                    <div class="">
+                      <span class="Comments"></span>
+                      <img
+                        src="./images/comment.png "
+                        alt=" "
+                        class="comments"
+                      />
+                      <span class="number text-white"> 12</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="team-member item">
+                    <img
+                      src="./images/A Marble Hornets Story.jpg"
+                      alt="movie 2 "
+                      class="img-fluid"
+                    />
+                    <div class="team-member-overlay">
+                      <div class="team-member-info text-center">
+                        <h6>Play Trailer</h6>
+
+                        <div class="social-list">
+                          <a href=" "
+                            ><i
+                              class="fa-solid fa-circle-caret-right fs-1 my-5 text-white"
+                            ></i
+                          ></a>
+                        </div>
+                        <p>A Marble Hornets Story</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating d-flex justify-content-between mt-2">
+                    <div class="me-lg-1">
+                      <span class="word-rate text-white">Rating</span>
+                      <img src="./images/rating.gif " alt=" " class="stars" />
+                    </div>
+                    <div class="">
+                      <span class="Comments"></span>
+                      <img
+                        src="./images/comment.png "
+                        alt=" "
+                        class="comments"
+                      />
+
+                      <span class="number text-white"> 12</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="team-member item">
+                    <img
+                      src="./images/The Rise of Gru.jpg"
+                      alt="movie 2 "
+                      class="img-fluid"
+                    />
+                    <div class="team-member-overlay">
+                      <div class="team-member-info text-center">
+                        <h6>Play Trailer</h6>
+
+                        <div class="social-list">
+                          <a href=" "
+                            ><i
+                              class="fa-solid fa-circle-caret-right fs-1 my-5 text-white"
+                            ></i
+                          ></a>
+                        </div>
+                        <p>The Rise of Gru</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating d-flex justify-content-between mt-2">
+                    <div class="me-lg-1">
+                      <span class="word-rate text-white mt-n5">Rating</span>
+                      <img src="./images/rating.gif " alt=" " class="stars" />
+                    </div>
+                    <div class="">
+                      <span class="Comments"></span>
+                      <img
+                        src="./images/comment.png "
+                        alt=" "
+                        class="comments"
+                      />
+
+                      <span class="number text-white"> 12</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <div class="team-member item">
+                      <img
+                        src="./images/The Bad Guys.jpg"
+                        alt="movie 2 "
+                        class="img-fluid"
+                      />
+                      <div class="team-member-overlay">
+                        <div class="team-member-info text-center">
+                          <h6>Play Trailer</h6>
+
+                          <div class="social-list">
+                            <a href=" "
+                              ><i
+                                class="fa-solid fa-circle-caret-right fs-1 my-5 text-white"
+                              ></i
+                            ></a>
+                          </div>
+                          <p>The Bad Guys</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating d-flex justify-content-between mt-2">
+                    <div class="me-lg-1">
+                      <span class="word-rate text-white">Rating</span>
+                      <img src="./images/rating.gif " alt=" " class="stars" />
+                    </div>
+                    <div class="">
+                      <span class="Comments"></span>
+                      <img
+                        src="./images/comment.png "
+                        alt=" "
+                        class="comments"
+                      />
+
+                      <span class="number text-white"> 12</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="team-member item">
+                    <img
+                      src="./images/Spirited Away.jpg"
+                      alt="movie 2 "
+                      class=""
+                    />
+                    <div class="team-member-overlay">
+                      <div class="team-member-info text-center">
+                        <h6>Play Trailer</h6>
+
+                        <div class="social-list">
+                          <a href=" "
+                            ><i
+                              class="fa-solid fa-circle-caret-right fs-1 my-5 text-white"
+                            ></i
+                          ></a>
+                        </div>
+                        <p>DSpirited Away</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating d-flex justify-content-between mt-2">
+                    <div class="me-lg-1">
+                      <span class="word-rate text-white">Rating</span>
+                      <img
+                        src="images/rating.gif "
+                        alt=" rating star"
+                        class="stars"
+                      />
+                    </div>
+                    <div class="">
+                      <span class="Comments"></span>
+                      <img
+                        src="./images/comment.png "
+                        alt=" "
+                        class="comments"
+                      />
+
+                      <span class="number text-white"> 12</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="team-member item">
+                    <img
+                      src="./images/Sniper's Eye.jpg"
+                      alt="movie 2 "
+                      class="img-fluid"
+                    />
+                    <div class="team-member-overlay">
+                      <div class="team-member-info text-center">
+                        <h6>Play Trailer</h6>
+
+                        <div class="social-list">
+                          <a href=" "
+                            ><i
+                              class="fa-solid fa-circle-caret-right fs-1 my-5 text-white"
+                            ></i
+                          ></a>
+                        </div>
+                        <p>Sniper's Eye</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating d-flex justify-content-between mt-2">
+                    <div class="me-lg-1">
+                      <span class="word-rate text-white">Rating</span>
+                      <img
+                        src="./images/rating.gif "
+                        alt="rating star"
+                        class="stars"
+                      />
+                    </div>
+                    <div class="">
+                      <span class="Comments"></span>
+                      <img
+                        src="./images/comment.png "
+                        alt=" "
+                        class="comments"
+                      />
+                      <span class="number text-white"> 12</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="team-member item">
+                    <img
+                      src="./images/Checkered Ninja 2.jpg"
+                      alt="movie 2 "
+                      class="img-fluid"
+                    />
+                    <div class="team-member-overlay">
+                      <div class="team-member-info text-center">
+                        <h6>Play Trailer</h6>
+
+                        <div class="social-list">
+                          <a href=" "
+                            ><i
+                              class="fa-solid fa-circle-caret-right fs-1 my-5 text-white"
+                            ></i
+                          ></a>
+                        </div>
+                        <p>Checkered Ninja 2</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating d-flex justify-content-between mt-2">
+                    <div class="me-lg-1">
+                      <span class="word-rate text-white">Rating</span>
+                      <img
+                        src="./images/rating.gif "
+                        alt="rating star"
+                        class="stars"
+                      />
+                    </div>
+                    <div class="">
+                      <span class="Comments"></span>
+                      <img
+                        src="./images/comment.png "
+                        alt="comment"
+                        class="comments"
+                      />
+
+                      <span class="number text-white"> 12</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="team-member item">
+                    <img
+                      src="./images/Firestarter.jpg"
+                      alt="firestarter"
+                      class="img-fluid"
+                    />
+                    <div class="team-member-overlay">
+                      <div class="team-member-info text-center">
+                        <h6>Play Trailer</h6>
+
+                        <div class="social-list">
+                          <a href=" "
+                            ><i
+                              class="fa-solid fa-circle-caret-right fs-1 my-5 text-white"
+                            ></i
+                          ></a>
+                        </div>
+                        <p>Firestarter</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating d-flex justify-content-between mt-2">
+                    <div class="me-lg-1">
+                      <span class="word-rate text-white">Rating</span>
+                      <img
+                        src="./images/rating.gif "
+                        alt="rating"
+                        class="stars"
+                      />
+                    </div>
+                    <div class="right-rate">
+                      <span class="Comments"></span>
+                      <img
+                        src="./images/comment.png "
+                        alt="comment"
+                        class="comments"
+                      />
+                      <span class="number text-white"> 12</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="team-member item">
+                    <img
+                      src="./images/Family Camp.jpg "
+                      alt="familu camp "
+                      class="img-fluid"
+                    />
+                    <div class="team-member-overlay">
+                      <div class="team-member-info text-center">
+                        <h6>Play Trailer</h6>
+
+                        <div class="social-list">
+                          <a href=" "
+                            ><i
+                              class="fa-solid fa-circle-caret-right fs-1 my-5 text-white"
+                            ></i
+                          ></a>
+                        </div>
+                        <p>Family Camp</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rating d-flex justify-content-between mt-2">
+                    <div class="me-lg-1">
+                      <span class="word-rate text-white">Rating</span>
+                      <img
+                        src="./images/rating.gif "
+                        alt=" rating"
+                        class="stars"
+                      />
+                    </div>
+                    <div class="">
+                      <span class="Comments"></span>
+                      <img
+                        src="./images/comment.png "
+                        alt="comment "
+                        class="comments"
+                      />
+
+                      <span class="number text-white"> 12</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- latest movies -->
+    <section id="movies">
+      <div class="container-fluid">
+        <div class="row mb-4" id="movies">
+          <div class="row">
+            <div class="col-12 d-flex align-items-center">
+              <div class="col-6 cast-title wow animate__fadeInLeftBig">
+                <h3 class="">
+                  <span>Latest </span>Movies
+                  <span><i class="fa-solid fa-angle-right"></i></span>
+                </h3>
+                <hr />
+              </div>
+              <div
+                class="col-6 d-flex justify-content-end wow animate__fadeInRightBig"
+              >
+                <form action="" class="text-white">
+                  Page
+                  <input
+                    type="text"
+                    value="1"
+                    size="1"
+                    class="input-paging text-center text-dark fs-5"
+                  />
+                  of <span class="fs-5">100</span>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-5 tm-gallery">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming video-item">
+              <img src="images/latest1.jpg" alt="Image" class="img-fluid" />
+              <figcaption
+                class="d-flex align-items-center justify-content-center"
+              >
+                <h2>Doctor Strange</h2>
+              </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between text-white">
+              <span class="text-white">18 Oct 2021</span>
+              <span class="text-white">9,906 views</span>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming video-item">
+              <img src="images/latest2.jpg" alt="Image" class="img-fluid" />
+              <figcaption
+                class="d-flex align-items-center justify-content-center"
+              >
+                <h2>Fall Out</h2>
+              </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between text-white">
+              <span class="text-white">14 Oct 2021</span>
+              <span class="text-white">16,100 views</span>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming video-item">
+              <img src="images/latest3.jpg" alt="Image" class="img-fluid" />
+              <figcaption
+                class="d-flex align-items-center justify-content-center"
+              >
+                <h2>Godzilla</h2>
+              </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between text-white">
+              <span class="text-white">12 Oct 2021</span>
+              <span class="text-white">12,460 views</span>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming video-item">
+              <img src="images/latest4.jpg" alt="Image" class="img-fluid" />
+              <figcaption
+                class="d-flex align-items-center justify-content-center"
+              >
+                <h2>Maleficent</h2>
+              </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between text-white">
+              <span class="text-white">10 Oct 2020</span>
+              <span class="text-white">11,402 views</span>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming video-item">
+              <img src="images/latest5.jpg" alt="Image" class="img-fluid" />
+              <figcaption
+                class="d-flex align-items-center justify-content-center"
+              >
+                <h2>Life of Pie</h2>
+              </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between text-white">
+              <span class="text-white">24 Sep 2020</span>
+              <span class="text-white">16,008 views</span>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming video-item">
+              <img src="images/latest6.jpg" alt="Image" class="img-fluid" />
+              <figcaption
+                class="d-flex align-items-center justify-content-center"
+              >
+                <h2>Thor</h2>
+              </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between text-white">
+              <span class="text-white">20 Sep 2020</span>
+              <span class="text-white">12,860 views</span>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming video-item">
+              <img src="images/latest7.jpg" alt="Image" class="img-fluid" />
+              <figcaption
+                class="d-flex align-items-center justify-content-center"
+              >
+                <h2>Scream</h2>
+              </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between text-white">
+              <span class="text-white">16 Sep 2020</span>
+              <span class="text-white">10,900 views</span>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming video-item">
+              <img src="images/latest8.jpg" alt="Image" class="img-fluid" />
+              <figcaption
+                class="d-flex align-items-center justify-content-center"
+              >
+                <h2>Me Before You</h2>
+              </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between text-white">
+              <span class="text-white">12 Sep 2020</span>
+              <span class="text-white">11,300 views</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TV show -->
+    <section class="wow animate__fadeInRightBig">
+      <div class="container-fluid my-3" id="tv_shows">
+        <div class="row" id="tv-shows">
+          <div class="d-flex justify-content-between">
+            <div class="cast-title">
+              <h3>
+                <span>TV </span> Shows
+                <span><i class="fa-solid fa-angle-right"></i></span>
+              </h3>
+              <hr />
+            </div>
+            <div class="wow animate__fadeInRightBig">
+              <a href="movie.html" class="text-white text-decoration-none"
+                >View All Movies</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services-02">
+        <div class="content-box-sm wow animate__fadeOutDown">
+          <div id="services-tab">
+            <ul class="text-center">
+              <li><a href="#service-tab-1">Comedy</a></li>
+              <li><a href="#service-tab-2">Drama</a></li>
+              <li>
+                <a href="#service-tab-3">Triller</a>
+              </li>
+              <li><a href="#service-tab-4">Adventure</a></li>
+            </ul>
+            <!-- Services-Tab-1 -->
+            <div id="service-tab-1" class="service-tab">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <img
+                      src="./images/dark cloud movie.jpg"
+                      class="rounded pt-4 img-fluid"
+                      alt="dark cloud"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="tab-bg">
+                      <h4>Dark Cloud</h4>
+                      <span>
+                        <i class="fa-solid fa-tv-retro text-muted me-1"></i
+                      ></span>
+
+                      <span class="text-muted fs-5">series (2020)</span>
+                      <p class="pt-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ad iure delectus repellendus voluptas et consequatur
+                        molestiae aliquid unde reprehenderit consectetur, eos
+                        nihil qui a dolor rerum nostrum quaerat quos laudantium.
+                      </p>
+                      <div class="services-2-btn">
+                        <a
+                          href="top_imdb.html"
+                          class="btn"
+                          title="Watch More"
+                          role="button"
+                          >Watch More</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Services-Tab-2 -->
+            <div id="service-tab-2" class="service-tab">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <img
+                      src="./images/thor-movie_XQ2YqMa.webp"
+                      class="rounded pt-4 img-fluid"
+                      alt="marverick"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="tab-bg">
+                      <h4>Maverick</h4>
+                      <span>
+                        <i class="fa-solid fa-tv-retro text-muted me-1"></i
+                      ></span>
+
+                      <span class="text-muted fs-5">series (2020)</span>
+                      <p class="pt-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ad iure delectus repellendus voluptas et consequatur
+                        molestiae aliquid unde reprehenderit consectetur, eos
+                        nihil qui a dolor rerum nostrum quaerat quos laudantium.
+                      </p>
+                      <div class="services-2-btn">
+                        <a
+                          href="top_imbd.html"
+                          class="btn"
+                          title="more results"
+                          role="button"
+                          >More Results</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Services-Tab-3 -->
+            <div id="service-tab-3" class="service-tab">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <img
+                      src="./images/joker face.jfif"
+                      class="rounded pt-4 img-fluid"
+                      alt="joker"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="tab-bg">
+                      <h4>Joker</h4>
+                      <span>
+                        <i class="fa-solid fa-tv-retro text-muted me-1"></i
+                      ></span>
+
+                      <span class="text-muted fs-5">series (2019)</span>
+                      <p class="pt-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ad iure delectus repellendus voluptas et consequatur
+                        molestiae aliquid unde reprehenderit consectetur, eos
+                        nihil qui a dolor rerum nostrum quaerat quos laudantium.
+                      </p>
+                      <div class="services-2-btn">
+                        <a
+                          href="#about"
+                          class="btn"
+                          title="more results"
+                          role="button"
+                          >More Results</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Services-Tab-4 -->
+            <div id="service-tab-4" class="service-tab">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <img
+                      src="./images/avatar.jfif"
+                      class="rounded pt-4 img-fluid"
+                      alt="avatar"
+                    />
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="tab-bg">
+                      <h4>Avatar</h4>
+                      <span>
+                        <i class="fa-solid fa-tv-retro text-muted me-1"></i
+                      ></span>
+
+                      <span class="text-muted fs-5">series (2020)</span>
+                      <p class="pt-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ad iure delectus repellendus voluptas et consequatur
+                        molestiae aliquid unde reprehenderit consectetur, eos
+                        nihil qui a dolor rerum nostrum quaerat quos laudantium.
+                      </p>
+                      <div class="services-2-btn">
+                        <a
+                          href="#"
+                          class="btn"
+                          title="more results"
+                          role="button"
+                          >More Results</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <nav aria-label="Page navigation example pb-5 ">
+      <ul class="pagination justify-content-center wow animate__flipInX">
+        <li class="page-item">
+          <a class="page-link text-black" href="home.html">Previous</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link active-color bg-danger" href="movie.html">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="top_imdb.html">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="top_imdb.html">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="top_imdb.html">4</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link text-black" href="top_imdb.html">Next</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="row"><hr /></div>
+    </div>
+    <footer class="footer pt-5 pb-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-3 col-md-8 px-2 mb-5">
+            <span>
+              <i class="fa-solid fa-camera-movie icon-little me-3"></i
+            ></span>
+            <span class="mb-4 footer-title text-white cast-title">
+              About MoviesJoy</span
+            >
+            <p class="pt-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia at
+              accusamus doloremque distinctio soluta, dolor aliquam voluptatem!
+            </p>
+          </div>
+          <div class="col-xl-2 col-md-4 px-2 mb-5">
+            <div class="footer-links pl-0">
+              <h3 class="text-white mb-4 footer-title">New Genres</h3>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Action</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Comedy</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Mystery</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Horror</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Family</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-4 px-2 mb-5 justify-content-sm-start">
+            <ul class="footer-links pl-0">
+              <li><h3 class="text-white mb-4 footer-title">Our Links</h3></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="movie.html">Movies</a></li>
+
+              <li><a href="top_imdb.html">IMDB</a></li>
+            </ul>
+          </div>
+          <div class="col-xl-4 col-md-8 px-2 mb-5">
+            <div class="media-icons mb-5">
+              <a href="# "><i class="fab fa-facebook-f"></i></a>
+              <a href="# "><i class="fab fa-twitter"></i></a>
+              <a href="# "><i class="fab fa-instagram"></i></a>
+              <a href="# "><i class="fab fa-linkedin-in"></i></a>
+              <a href="# "><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="box input-box mb-2">
+              <div class="link_name">
+                Newsletter
+                <span class="mx-2"
+                  ><i class="fa-solid fa-paper-plane"></i
+                ></span>
+              </div>
+              <div class="mb-2">
+                <input type="text" placeholder="Enter your email" />
+              </div>
+              <div>
+                <input type="button" value="Subscribe" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <div class="d-flex justify-content-around my-3">
+            <div class=" ">
+              <div class="text-dark">
+                Copyright 2022&nbsp;
+                <span class="text-white">MoviesJoy</span>&nbsp; Company. All
+                rights reserved.
+              </div>
+            </div>
+            <div class=" ">
+              <div class="text-dark">
+                Designed by&nbsp; <span class="text-white">MoviesJoy</span>
+              </div>
+              <div
+                class="footer-icon d-flex align-items-center justify-content-center rounded-circle"
+              >
+                <a href="# "
+                  ><i class="fa-solid fa-arrow-up text-white fs-5"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jquery file -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- custom js file -->
+    <script src="js/plugins.js"></script>
+    <!-- Carrousel JS -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Way Point JS -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- wow js -->
+    <script src="./node_module/wow.js/dist/wow.min.js"></script>
+    <!-- boorstrap js -->
+    <script src="./node_module/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(window).on("load", function () {
+        $("body").addClass("loaded");
+      });
+    </script>
+    <!-- responsive tab js -->
+    <script src="js/jquery.responsiveTabs.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

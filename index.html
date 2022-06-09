@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Thiri Pwint" />
+    <link rel="icon" href="images/clapperboard.png" />
+    <title>MovieJoy</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="node_module/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!---fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/12b0473b9f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- animate css -->
+    <link rel="stylesheet" href="node_module/animate.css/animate.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="css/cus.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <!-- home section -->
+    <header>
+      <nav class="sticky">
+        <div class="container nav-wrapper">
+          <div class="brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path
+                d="M10.5 10a2.5 2.5 0 1 1-5.001-.001A2.5 2.5 0 0 1 10.5 10zM16 4v12c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2zm-3.5 6a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0zm6.715-4.914L17 6.562v7l2.215 1.477a.505.505 0 0 0 .785-.42V5.506a.505.505 0 0 0-.785-.42z"
+              />
+            </svg>
+            <span>MoviesJoy</span>
+          </div>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-list">
+            <li class="active">
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="movie.html">Movies</a></li>
+
+            <li class=""><a href="top_imdb.html">Top IMDB</a></li>
+
+            <li class="mod">
+              <button
+                type="button"
+                class="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Login
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">
+                        Enter your email and password
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="">
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          placeholder="Email"
+                        />
+                        <input
+                          type="password"
+                          class="form-control mb-3"
+                          placeholder="password"
+                        />
+                        <button type="button" class="btn w-100 btn-primary">
+                          Login
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-textbox container-fluid text-center">
+      <div class="row my-5">
+        <div class="col-12">
+          <div class="text-center">
+            <div class="my-2">
+              <i
+                class="fa-solid fa-camera-movie icon-big wow animate__bounce"
+              ></i>
+            </div>
+            <div>
+              <h2 class="home-content-title">Thousands of Titles</h2>
+            </div>
+            <h3 class="text-white">Movies is Worthwhile</h3>
+          </div>
+        </div>
+        <div class="mt-4">
+          <a href="movie.html" class="btn rounded-5 btn-full"
+            >Go to MoviesJoy
+            <span class="text-white"
+              ><i class="fa-solid fa-circle-arrow-right mx-sm-1"></i></span
+          ></a>
+        </div>
+      </div>
+      <div class="container-fluid text-start my-3">
+        <div class="row">
+          <div class="col-3">
+            <span class="text-white fs-6">Follow us</span>
+          </div>
+          <div class="col-9">
+            <div class="d-inline-block">
+              <a href="# "
+                ><i
+                  class="fab fa-facebook-f text-white me-sm-1 social-icon"
+                ></i></a
+              ><span class="text-white social-font me-sm-4">Facebook</span>
+              <a href="# "
+                ><i
+                  class="fab fa-twitter text-white me-sm-1 social-icon"
+                ></i></a
+              ><span class="text-white social-font me-sm-5">Twitter</span>
+              <a href="# "
+                ><i
+                  class="fab fa-instagram text-white me-sm-1 social-icon"
+                ></i></a
+              ><span class="text-white social-font me-sm-5">Instagram</span>
+              <a href="# "
+                ><i
+                  class="fab fa-linkedin-in text-white me-sm-1 social-icon"
+                ></i></a
+              ><span class="text-white social-font me-sm-5">Linkin</span>
+              <a href="# "
+                ><i
+                  class="fab fa-youtube text-white me-sm-1 social-icon"
+                ></i></a
+              ><span class="text-white social-font me-sm-5"> Youtube</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="row"><hr /></div>
+    </div>
+    <footer class="footer pt-5 pb-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-3 col-md-8 px-2 mb-5">
+            <span>
+              <i class="fa-solid fa-camera-movie icon-little me-3"></i
+            ></span>
+            <span class="mb-4 footer-title text-white cast-title">
+              About MoviesJoy</span
+            >
+            <p class="pt-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia at
+              accusamus doloremque distinctio soluta, dolor aliquam voluptatem!
+            </p>
+          </div>
+          <div class="col-xl-2 col-md-4 px-2 mb-5">
+            <div class="footer-links pl-0">
+              <h3 class="text-white mb-4 footer-title">New Genres</h3>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Action</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Comedy</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Mystery</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Horror</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Family</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-4 px-2 mb-5 justify-content-sm-start">
+            <ul class="footer-links pl-0">
+              <li><h3 class="text-white mb-4 footer-title">Our Links</h3></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="movie.html">Movies</a></li>
+
+              <li><a href="top_imdb.html">IMDB</a></li>
+            </ul>
+          </div>
+          <div class="col-xl-4 col-md-8 px-2 mb-5">
+            <div class="media-icons mb-5">
+              <a href="# "><i class="fab fa-facebook-f"></i></a>
+              <a href="# "><i class="fab fa-twitter"></i></a>
+              <a href="# "><i class="fab fa-instagram"></i></a>
+              <a href="# "><i class="fab fa-linkedin-in"></i></a>
+              <a href="# "><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="box input-box mb-2">
+              <div class="link_name">
+                Newsletter
+                <span class="mx-2"
+                  ><i class="fa-solid fa-paper-plane"></i
+                ></span>
+              </div>
+              <div class="mb-2">
+                <input type="text" placeholder="Enter your email" />
+              </div>
+              <div>
+                <input type="button" value="Subscribe" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <div class="d-flex justify-content-around my-3">
+            <div class=" ">
+              <div class="text-dark">
+                Copyright 2022&nbsp;
+                <span class="text-white">MoviesJoy</span>&nbsp; Company. All
+                rights reserved.
+              </div>
+            </div>
+            <div class=" ">
+              <div class="text-dark">
+                Designed by&nbsp; <span class="text-white">MoviesJoy</span>
+              </div>
+              <div
+                class="footer-icon d-flex align-items-center justify-content-center rounded-circle"
+              >
+                <a href="# "
+                  ><i class="fa-solid fa-arrow-up text-white fs-5"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jquery file -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- custom js file -->
+    <script src="js/plugins.js"></script>
+    <!-- Carrousel JS -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Way Point JS -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="./node_module/wow.js/dist/wow.min.js"></script>
+    <!-- boorstrap js -->
+    <script src="./node_module/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(window).on("load", function () {
+        $("body").addClass("loaded");
+      });
+    </script>
+    <!-- responsive tab js -->
+    <script src="js/jquery.responsiveTabs.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

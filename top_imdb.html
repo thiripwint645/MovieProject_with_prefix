@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Thiri Pwint" />
+    <link rel="icon" href="images/clapperboard.png" />
+    <title>Top IMDB</title>
+
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!---fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/12b0473b9f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- animate css -->
+    <link rel="stylesheet" href="node_module/animate.css/animate.css" />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="node_module/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- style css -->
+    <link rel="stylesheet" href="css/cus.css" />
+  </head>
+
+  <body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <header>
+      <nav class="sticky">
+        <div class="container nav-wrapper">
+          <div class="brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path
+                d="M10.5 10a2.5 2.5 0 1 1-5.001-.001A2.5 2.5 0 0 1 10.5 10zM16 4v12c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2zm-3.5 6a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0zm6.715-4.914L17 6.562v7l2.215 1.477a.505.505 0 0 0 .785-.42V5.506a.505.505 0 0 0-.785-.42z"
+              />
+            </svg>
+            <span>MoviesJoy</span>
+          </div>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="movie.html">Movies</a></li>
+
+            <li class="active"><a href="top_imdb.html">Top IMDB</a></li>
+
+            <li>
+              <button
+                type="button"
+                class="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Login
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">
+                        Enter your email and password
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="">
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          placeholder="Email"
+                        />
+                        <input
+                          type="password"
+                          class="form-control mb-3"
+                          placeholder="password"
+                        />
+                        <button type="button" class="btn w-100 btn-primary">
+                          Login
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- background vdo -->
+
+    <div class="container-fluid vdo">
+      <div class="row">
+        <div id="video-container">
+          <video
+            id="home-bg-video"
+            poster="video/dakota-movie-20221.jpg"
+            class="img-fluid"
+            autoplay
+            loop
+            muted
+          >
+            <source
+              src="video/Dakota - Official Trailer.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div id="home-overlay"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMDB -->
+    <section>
+      <div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12">
+                  <div class="d-flex justify-content-between">
+                    <div class="cast-title wow animate__fadeInLeftBig">
+                      <h3 class="">
+                        <span>Top </span>IMDB
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                      </h3>
+                      <hr />
+                    </div>
+                    <div class="wow animate__fadeInRightBig">
+                      <i class="fa-solid fa-eye text-white"></i>
+                      <span class=" ">6432 views</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center wow animate__backInRight">
+            <div class="col-xl-6">
+              <div>
+                <img
+                  src="./images/dokata.jpg"
+                  class="rounded img-fluid"
+                  alt="dakota"
+                />
+              </div>
+            </div>
+            <div class="col-xl-6 justify-content-center align-items-center">
+              <div class="">
+                <div id="tech-statement" class="text-start">
+                  <h5 class="text-white text-start py-2">Dakota</h5>
+                  <p>
+                    <span class="text-muted">Comedy</span
+                    ><span>&nbsp; 2022-in production</span>
+                  </p>
+                  <span class="me-sm-2"
+                    ><i
+                      class="fa-solid fa-star-sharp text-warning fs-6"
+                    ></i></span
+                  ><span class="me-sm-2"
+                    ><i
+                      class="fa-solid fa-star-sharp text-warning fs-6"
+                    ></i></span
+                  ><span class="me-sm-2"
+                    ><i
+                      class="fa-solid fa-star-sharp text-warning fs-6"
+                    ></i></span
+                  ><span class="me-sm-2"
+                    ><i class="fa-solid fa-star-sharp fs-6"></i></span
+                  ><span class=""
+                    ><i class="fa-solid fa-star-sharp fs-6"></i
+                  ></span>
+                  <p>
+                    <span class="text-muted">Synopsis</span>&nbsp;:&nbsp;Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                    alias incidunt, voluptate aperiam esse explicabo cumque ea
+                    dolorum sint distinctio amet. Voluptate dicta accusantium
+                    maiores, soluta veniam recusandae! Ab, minima?
+                  </p>
+                  <p>
+                    <span class="text-muted">Cast</span>&nbsp;:&nbsp;Will Frote,
+                    Kristen Schwwi
+                  </p>
+                  <p>
+                    <span class="text-muted">Duration</span>&nbsp;:&nbsp;1hour
+                    36 minutes
+                  </p>
+                  <p>
+                    <span class="text-muted">IMDB</span>&nbsp;:&nbsp;6.1/10 4356
+                    votes
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-sm-2">
+            <div class="col-sm-6 my-3">
+              <div>
+                <a
+                  href="# "
+                  class="btn rounded-5 btn-full me-md-2 wow animate__backInRight"
+                  >Trailer</a
+                >
+
+                <a
+                  href="# "
+                  class="btn rounded-5 btn-ghost wow animate__backInRight"
+                  >Play Now<i class="fa-solid fa-play mx-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-6 add-btn my-3">
+              <div class="wow animate__backInRight">
+                <span class="text-white">
+                  <i class="fa-solid fa-circle-plus me-2"></i
+                ></span>
+                <span class="wow animate__backInRight"
+                  >Add to the wishlist</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row wow animate__backInRight">
+            <div class="col-md-12 py-3 season">
+              <div class="my-2">
+                <span class="me-sm-2 active-season text-white-50"
+                  >Season 1</span
+                >
+
+                <span class="me-sm-2">Season 2</span>
+                <span class="me-sm-2">Season 3</span>
+                <span class="">Season 4</span>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="season-number">
+            <div class="col-xl-8">
+              <div class="d-flex flex-wrap wow animate__backInRight">
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  1
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  2
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  3
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  4
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  5
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  6
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  7
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  8
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  9
+                </div>
+
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  10
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  11
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  12
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  13
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  14
+                </div>
+                <div
+                  class="rounded-icon text-white-50 text-center me-sm-2 mb-2"
+                >
+                  15
+                </div>
+
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  16
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  17
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  18
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  19
+                </div>
+                <div class="rounded-icon text-white-50 text-center me-2 mb-2">
+                  20
+                </div>
+                <div class="rounded-icon text-white-50 text-center mb-2">
+                  21
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- cast section -->
+    <section id="top_imdb">
+      <div class="container">
+        <div class="row mb-lg-5 cast-title">
+          <div class="col-12">
+            <div class="d-flex justify-content-between">
+              <div class="wow animate__fadeInLeftBig">
+                <h3 class=" ">
+                  <span>Top </span>Cast
+                  <span><i class="fa-solid fa-angle-right"></i></span>
+                </h3>
+                <hr />
+              </div>
+              <div class="wow animate__fadeInRightBig">
+                <i class="fa-solid fa-pencil me-xs-2"></i>
+                <span class=" ">Edit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mb-lg-5 wow animate__fadeInUpBig">
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-md-6 mb-5">
+                <div
+                  class="row justify-content-center align-items-center"
+                  data-aos="fade-up"
+                >
+                  <div class="col-lg-4 col-5">
+                    <img
+                      src="./images/abbie cornish.jpg"
+                      class="cast-photo"
+                      alt="Abbie Cornish "
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p>Abbie Cornish</p>
+                    <p class="text-muted">as Kate Sanders</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-5">
+                <div
+                  class="row justify-content-center align-items-center"
+                  data-aos="fade-up"
+                >
+                  <div class="col-lg-4 col-5">
+                    <img
+                      src="./images/tim rozon.jpg"
+                      class="cast-photo"
+                      alt="Tim Rozon "
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p>Tim Rozon</p>
+                    <p class="text-muted">as CJ Malcorn</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-5">
+                <div
+                  class="row justify-content-center align-items-center"
+                  data-aos="fade-up"
+                >
+                  <div class="col-lg-4 col-5">
+                    <img
+                      src="./images/william baldwin.jpg"
+                      class="cast-photo"
+                      alt=" "
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p>William Baldwin</p>
+                    <p class="text-muted">as Monty Sanders</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-5">
+                <div
+                  class="row justify-content-center align-items-center"
+                  data-aos="fade-up"
+                >
+                  <div class="col-lg-4 col-5">
+                    <img
+                      src="./images/patrick muldoon.jpg"
+                      class="cast-photo"
+                      alt="Patrick Muldoon "
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p>Patrick Muldoon</p>
+                    <p class="text-muted">as Sheriff Danforth</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-5">
+                <div
+                  class="row justify-content-center align-items-center"
+                  data-aos="fade-up"
+                >
+                  <div class="col-lg-4 col-5">
+                    <img
+                      src="./images/lorenzo mcgovern zaini.jpg"
+                      class="cast-photo"
+                      alt="Lorenzp McGovern Zaini "
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p>Loren McGovern Zarni</p>
+                    <p class="text-muted">as Ethan Danforth</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-5">
+                <div
+                  class="row justify-content-center align-items-center"
+                  data-aos="fade-up"
+                >
+                  <div class="col-lg-4 col-5">
+                    <img
+                      src="./images/lola sultan.jpg"
+                      class="cast-photo"
+                      alt="Lola Sultan "
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p>Lola Sultan</p>
+                    <p class="text-muted">as Alex Sanders</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-5">
+                <div
+                  class="row justify-content-center align-items-center"
+                  data-aos="fade-up"
+                >
+                  <div class="col-lg-4 col-5">
+                    <img
+                      src="./images/lara pictet.jpg"
+                      class="cast-photo"
+                      alt=" "
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p>Lara Pictet</p>
+                    <p class="text-muted">as Jenny</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-5">
+                <div
+                  class="row justify-content-center align-items-center"
+                  data-aos="fade-up"
+                >
+                  <div class="col-lg-4 col-5">
+                    <img
+                      src="./images/katie mccovern.jpg"
+                      class="cast-photo"
+                      alt="Kati McGovern "
+                    />
+                  </div>
+                  <div class="col-5">
+                    <p>Katie McGovern Zarni</p>
+                    <p class="text-muted">as Stacy Dwyer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="row" data-aos="fade-up">
+              <p>
+                <span class="me-2">User Lists</span
+                ><i class="fa-solid fa-angle-right"></i>
+              </p>
+
+              <p class="">Related lists from IMDb users</p>
+
+              <p class="">
+                <i class="fa-solid fa-plus-large me-2"></i><span>Creat</span> a
+                list
+              </p>
+            </div>
+
+            <div class="row">
+              <div class="col-12 border-3 user-lists mb-3" data-aos="fade-up">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="cast-right">New Movies</p>
+                    <p class="text-muted">created 6 yeas ago .5308 titles</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./images/Your Name..jpg"
+                      alt=" your name"
+                      class="w-50 img-fluid float-end"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 border-3 user-lists mb-3" data-aos="fade-up">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="cast-right">Movies</p>
+                    <p class="text-muted">created 6 yeas ago .5308 titles</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./images/X.jpg"
+                      alt=" x"
+                      class="w-50 img-fluid float-end"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 border-3 user-lists mb-3" data-aos="fade-up">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="cast-right">Watch at Home</p>
+                    <p class="text-muted">created 3 yeas ago .5308 titles</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./images/Ninja Scroll.jpg"
+                      alt=" "
+                      class="w-50 img-fluid float-end"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 border-3 user-lists mb-3" data-aos="fade-up">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="cast-right">2022</p>
+                    <p class="text-muted">created 7 months ago .22 titles</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./images/Firestarter.jpg"
+                      alt=" "
+                      class="w-50 img-fluid float-end"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 border-3 user-lists mb-3" data-aos="fade-up">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="cast-right">Watchlist 3</p>
+                    <p class="text-muted">created 4 years ago .5722 titles</p>
+                  </div>
+                  <div>
+                    <img
+                      src="./images/ghost.jpg"
+                      alt=" "
+                      class="w-50 img-fluid float-end"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav aria-label="Page navigation example pb-5 ">
+      <ul class="pagination justify-content-center wow animate__flipInX">
+        <li class="page-item">
+          <a class="page-link text-black" href="movie.html">Previous</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="movie.html">1</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link active-color bg-danger" href="top_imdb.html">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="movie.html">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="movie.html">4</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link text-black" href="index.html">Next</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="row"><hr /></div>
+    </div>
+
+    <footer class="footer pt-5 pb-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-3 col-md-8 px-2 mb-5">
+            <span>
+              <i class="fa-solid fa-camera-movie icon-little me-3"></i
+            ></span>
+            <span class="mb-4 footer-title text-white cast-title">
+              About MoviesJoy</span
+            >
+            <p class="pt-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia at
+              accusamus doloremque distinctio soluta, dolor aliquam voluptatem!
+            </p>
+          </div>
+          <div class="col-xl-2 col-md-4 px-2 mb-5">
+            <div class="footer-links pl-0">
+              <h3 class="text-white mb-4 footer-title">New Genres</h3>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Action</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Comedy</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Mystery</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Horror</span>
+              </div>
+              <div class="pb-1">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-circle-arrow-right me-1 ft-icon"
+                  ></i></a
+                ><span class="text-white">Family</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-4 px-2 mb-5 justify-content-sm-start">
+            <ul class="footer-links pl-0">
+              <li><h3 class="text-white mb-4 footer-title">Our Links</h3></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="movie.html">Movies</a></li>
+
+              <li><a href="top_imdb.html">IMDB</a></li>
+            </ul>
+          </div>
+          <div class="col-xl-4 col-md-8 px-2 mb-5">
+            <div class="media-icons mb-5">
+              <a href="# "><i class="fab fa-facebook-f"></i></a>
+              <a href="# "><i class="fab fa-twitter"></i></a>
+              <a href="# "><i class="fab fa-instagram"></i></a>
+              <a href="# "><i class="fab fa-linkedin-in"></i></a>
+              <a href="# "><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="box input-box mb-2">
+              <div class="link_name">
+                Newsletter
+                <span class="mx-2"
+                  ><i class="fa-solid fa-paper-plane"></i
+                ></span>
+              </div>
+              <div class="mb-2">
+                <input type="text" placeholder="Enter your email" />
+              </div>
+              <div>
+                <input type="button" value="Subscribe" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <div class="d-flex justify-content-around my-3">
+            <div class=" ">
+              <div class="text-dark">
+                Copyright 2022&nbsp;
+                <span class="text-white">MoviesJoy</span>&nbsp; Company. All
+                rights reserved.
+              </div>
+            </div>
+            <div class=" ">
+              <div class="text-dark">
+                Designed by&nbsp; <span class="text-white">MoviesJoy</span>
+              </div>
+              <div
+                class="pg2-footer-icon d-flex align-items-center justify-content-center rounded-circle"
+              >
+                <a href="# "
+                  ><i class="fa-solid fa-arrow-up text-white fs-5"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jquery file -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- Way Point JS -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- wow js -->
+    <script src="./node_module/wow.js/dist/wow.min.js"></script>
+    <!-- boorstrap js -->
+    <script src="./node_module/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script>
+      $(window).on("load", function () {
+        $("body").addClass("loaded");
+      });
+    </script>
+    <!-- custom js file -->
+    <script src="js/script.js"></script>
+    <script>
+      // way point footer up arrow
+      var waypoint1 = new Waypoint({
+        element: document.getElementById("season-number"),
+        handler: function (direction) {
+          if (direction === "down") {
+            document
+              .querySelector(".pg2-footer-icon")
+              .classList.add("pg2-footer-icon-show");
+            document
+              .querySelector(".pg2-footer-icon")
+              .classList.add("animate__fadeInDown");
+          } else {
+            document
+              .querySelector(".pg2-footer-icon")
+              .classList.remove("pg2-footer-icon-show");
+            document
+              .querySelector(".pg2-footer-icon")
+              .classList.remove("animate__fadeInDown");
+          }
+        },
+        offset: "50%",
+      });
+    </script>
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+      });
+    </script>
+  </body>
+</html>
